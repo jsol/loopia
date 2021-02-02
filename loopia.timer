@@ -1,0 +1,9 @@
+[Unit]
+Description=Loopia timer
+
+[Timer]
+OnUnitActiveSec=3600s
+OnBootSec=60s
+
+[Install]
+WantedBy=timers.target

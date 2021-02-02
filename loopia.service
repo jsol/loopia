@@ -1,0 +1,14 @@
+[Unit]
+Description=Refresh ip in Loopia DNS A records if needed
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Environment=LOOPIA_USER="LOOPIA USER ID"
+Environment=LOOPIA_PASS="LOOPIA PASSWORD"
+User=loopia
+Type=oneshot
+ExecStart=/usr/bin/python /usr/local/bin/loopia.py
+
+
